@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilean Roadtrips | La Guía Definitiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
 
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="logo-placeholder"><i class="fa-solid fa-route"></i></div>
+                <span class="brand-name">Chilean Roadtrips</span>
+            </div>
+            <nav>
+                <button class="nav-btn active" onclick="switchPage('portada')">Inicio</button>
+                <button class="nav-btn" onclick="switchPage('nota1')">Periodismo: Ruta</button>
+                <button class="nav-btn" onclick="switchPage('nota2')">Periodismo: Copiloto IA</button>
+                <button class="nav-btn accent-btn" onclick="switchPage('ia-page')">Acceso IA <i class="fa-solid fa-robot"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="portada" class="page-section active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>EXPLORA • VIAJA • DESCUBRE</h1>
+                <p>La guía definitiva para tu próximo viaje en carretera por Chile sin salirte del presupuesto.</p>
+                <button class="cta-btn" onclick="switchPage('ia-page')">Planificar mi Ruta</button>
+            </div>
+        </section>
+
+        <section class="intro-cards container">
+            <div class="card" onclick="switchPage('nota1')">
+                <i class="fa-solid fa-campground icon-card"></i>
+                <h3>El Auge Overland</h3>
+                <p>Descubre por qué viajar sobre ruedas y acampar es la nueva forma favorita de recorrer Chile.</p>
+            </div>
+            <div class="card" onclick="switchPage('nota2')">
+                <i class="fa-solid fa-gas-pump icon-card"></i>
+                <h3>Evita Sorpresas</h3>
+                <p>El combustible y los peajes pueden arruinar tu viaje. Te contamos cómo la IA es tu mejor aliada.</p>
+            </div>
+            <div class="card" onclick="switchPage('ia-page')">
+                <i class="fa-solid fa-calculator icon-card"></i>
+                <h3>Estimador Inteligente</h3>
+                <p>Calcula el gasto exacto de bencina y peajes antes de encender el motor.</p>
+            </div>
+        </section>
+    </main>
+
+    <main id="nota1" class="page-section container">
+        <article class="news-article">
+            <span class="category">Estilo de Vida / Viajes</span>
+            <h2>Rutas alternativas y bajo presupuesto: El fenómeno del "Roadtrip" en Chile</h2>
+            <p class="author">Por Equipo Periodístico Chilean Roadtrips</p>
+            <hr>
+            <p>Recorrer las carreteras chilenas se ha transformado en mucho más que un traslado; hoy es un estilo de vida. Desde la mística Ruta 5 hasta los rincones más complejos de la Carretera Austral, miles de viajeros se lanzan a la ruta buscando desconexión, campings bajo las estrellas y las clásicas "picadas" interurbanas.</p>
+            
+            <blockquote>"La libertad de parar donde quieras a comerte un completo o armar la carpa no tiene precio, pero el presupuesto sí que lo tiene."</blockquote>
+
+            <p>Sin embargo, el factor económico es el principal enemigo del aventurero. Conocer el estado de los caminos, localizar las estaciones de servicio interurbanas y gestionar los costos se vuelve vital para que la aventura no termine en una grúa o con la cuenta en cero.</p>
+        </article>
+    </main>
+
+    <main id="nota2" class="page-section container">
+        <article class="news-article">
+            <span class="category">Tecnología y Medios</span>
+            <h2>Algoritmos en la ruta: Por qué una IA es el copiloto que le faltaba a tu presupuesto</h2>
+            <p class="author">Por Equipo Periodístico Chilean Roadtrips</p>
+            <hr>
+            <p>Calcular cuánto gasta un auto no es tarea fácil en la geografía chilena. Las subidas de la cordillera, el peso del equipaje, el precio variable de la bencina por región y, sobre todo, la enorme cantidad de peajes (con tarifas saturadas o de temporada) hacen que planificar a mano sea un dolor de cabeza.</p>
+            
+            <p>Aquí es donde entra la tecnología. Una herramienta de planificación centralizada que utilice automatización e inteligencia artificial permite cruzar los datos de kilometraje con las tarifas vigentes de las autopistas nacionales. Antes de salir de casa, el conductor sabe exactamente cuánto dinero necesita transferir a su cuenta para el viaje.</p>
+        </article>
+    </main>
+
+    <main id="ia-page" class="page-section container">
+        <div class="ia-box">
+            <h2><i class="fa-solid fa-brain"></i> Copiloto Inteligente: Estimador de Ruta</h2>
+            <p>Calcula los costos aproximados para tu próximo roadtrip por Chile.</p>
+            
+            <form id="ia-form" onsubmit="calcularRuta(event)">
+                <div class="form-group">
+                    <label for="origen">Origen:</label>
+                    <input type="text" id="origen" placeholder="Ej: Santiago" required>
+                </div>
+                <div class="form-group">
+                    <label for="destino">Destino:</label>
+                    <select id="destino" required>
+                        <option value="">-- Selecciona una ruta escénica --</option>
+                        <option value="bahia">Bahía Inglesa (Norte)</option>
+                        <option value="valdivia">Valdivia (Sur)</option>
+                        <option value="pvaras">Puerto Varas / Carretera Austral</option>
+                    </select>
+                </div>
+                <button type="submit" class="calc-btn">Calcular Presupuesto Óptimo</button>
+            </form>
+
+            <div id="result-container" class="results hidden">
+                <h3><i class="fa-solid fa-wallet"></i> Resultado de la Estimación IA:</h3>
+                <div class="res-item"><span>Costo Estimado Bencina:</span> <strong id="res-bencina">$0</strong></div>
+                <div class="res-item"><span>Costo Total Peajes:</span> <strong id="res-peajes">$0</strong></div>
+                <hr>
+                <div class="res-item total"><span>Presupuesto Total Sugerido:</span> <strong id="res-total">$0</strong></div>
+                
+                <div class="tips-ia">
+                    <h4><i class="fa-solid fa-lightbulb"></i> Tip de la IA para esta ruta:</h4>
+                    <p id="ia-tip">Selecciona una ruta para ver los consejos de picadas y estaciones.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Chilean Roadtrips - Explora • Viaja • Descubre. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
