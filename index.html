@@ -1,23 +1,75 @@
-<!-- SECCIÓN: ACCESO A LA IA (ACTUALIZADA) -->
-    <main id="ia-page" class="page-section container">
-        <div class="ia-box" style="text-align: center;">
-            <h2><i class="fa-solid fa-brain"></i> Copiloto Inteligente: Estimador de Ruta</h2>
-            <p style="margin-bottom: 25px;">Calcula con precisión el gasto de bencina y los peajes de tu próximo viaje en carretera por Chile con nuestra herramienta automatizada.</p>
-            
-            <!-- TARJETA INFORMATIVA PRE-VIAJE -->
-            <div class="tips-ia" style="text-align: left; margin-bottom: 30px;">
-                <h4><i class="fa-solid fa-circle-info"></i> ¿Qué hace este copiloto?</h4>
-                <p>Cruza los datos de kilometraje de las rutas escénicas del país con los precios de combustible actualizados y las tarifas vigentes de los peajes troncales para entregarte un presupuesto óptimo antes de encender el motor.</p>
+<!-- NAV / ENCABEZADO (CORREGIDO SIN "PERIODISMO") -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <!-- Aquí puedes poner <img src="image.png" alt="Logo" class="logo-img"> cuando subas tu logo -->
+                <div class="logo-placeholder"><i class="fa-solid fa-route"></i></div>
+                <span class="brand-name">Chilean Roadtrips</span>
             </div>
-
-            <!-- TU BOTÓN DE REDIRECCIÓN -->
-            <!-- Reemplaza "https://tu-enlace-a-la-ia.com" por la URL real de tu aplicación -->
-            <a href="https://tu-enlace-a-la-ia.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                <button class="calc-btn" style="font-size: 18px; padding: 16px; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                    Iniciar Estimador de Ruta <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </button>
-            </a>
-            
-            <p style="font-size: 12px; color: #666; margin-top: 15px;">La herramienta se abrirá en una nueva pestaña para que no pierdas tu navegación.</p>
+            <nav>
+                <button class="nav-btn active" onclick="switchPage('portada')">Inicio</button>
+                <button class="nav-btn" onclick="switchPage('nota1')">Rutas Alternativas</button>
+                <button class="nav-btn" onclick="switchPage('nota2')">Tecnología e IA</button>
+                <button class="nav-btn accent-btn" onclick="switchPage('ia-page')">Acceso IA <i class="fa-solid fa-robot"></i></button>
+            </nav>
         </div>
+    </header>
+
+    <!-- SECCIÓN: PORTADA (INICIO) -->
+    <main id="portada" class="page-section active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>EXPLORA • VIAJA • DESCUBRE</h1>
+                <p>La guía definitiva para tu próximo viaje en carretera por Chile sin salirte del presupuesto.</p>
+                <button class="cta-btn" onclick="switchPage('ia-page')">Planificar mi Ruta</button>
+            </div>
+        </section>
+
+        <section class="intro-cards container">
+            <div class="card" onclick="switchPage('nota1')">
+                <i class="fa-solid fa-campground icon-card"></i>
+                <h3>El Auge Overland</h3>
+                <p>Descubre por qué viajar sobre ruedas y acampar es la nueva forma favorita de recorrer Chile.</p>
+            </div>
+            <div class="card" onclick="switchPage('nota2')">
+                <i class="fa-solid fa-gas-pump icon-card"></i>
+                <h3>Evita Sorpresas</h3>
+                <p>El combustible y los peajes pueden arruinar tu viaje. Te contamos cómo la IA es tu mejor aliada.</p>
+            </div>
+            <div class="card" onclick="switchPage('ia-page')">
+                <i class="fa-solid fa-calculator icon-card"></i>
+                <h3>Estimador Inteligente</h3>
+                <p>Calcula el gasto exacto de bencina y peajes antes de encender el motor.</p>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: EL EQUIPO -->
+        <section class="team-section container">
+            <div class="team-title">
+                <h2>Detrás de la Ruta</h2>
+                <p>Somos un equipo de estudiantes de periodismo apasionados por la ruta, la investigación y la tecnología aplicada al servicio de la comunidad viajera.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                    <h4>Laura Ellis</h4>
+                    <span>Periodismo</span>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                    <h4>Andrea Huentequeo</h4>
+                    <span>Periodismo</span>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                    <h4>Katherine Matamala</h4>
+                    <span>Periodismo</span>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
+                    <h4>Thomas Quintanilla</h4>
+                    <span>Periodismo</span>
+                </div>
+            </div>
+        </section>
     </main>
