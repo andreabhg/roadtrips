@@ -1,8 +1,8 @@
 /**
  * CONTROLADOR DE INTERFAZ - CHILEAN ROADTRIPS
- * Cambia dinámicamente las pestañas de navegación sin recargar la página.
+ * Cambia dinámicamente las pestañas de navegación de forma instantánea.
  */
-function switchPage(pageId, event) {
+function switchPage(pageId) {
     // 1. Ocultar todas las secciones de la página
     const sections = document.querySelectorAll('.page-section');
     sections.forEach(section => {
@@ -21,9 +21,11 @@ function switchPage(pageId, event) {
         activeSection.classList.add('active');
     }
 
-    // 4. Marcar como activo el botón del menú que recibió el click
-    if (event && event.currentTarget) {
-        event.currentTarget.classList.add('active');
+    // 4. Buscar el botón que se presionó de forma manual y activarlo
+    // Esto evita usar el parámetro 'event' que rompía la navegación
+    const clickedButton = document.querySelector(`button[onclick*="${pageId}"]`);
+    if (clickedButton) {
+        clickedButton.classList.add('active');
     }
 
     // 5. Mover el scroll del navegador al inicio de forma suave
