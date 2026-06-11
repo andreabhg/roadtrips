@@ -16,10 +16,10 @@
                 <span class="brand-name">Chilean Roadtrips</span>
             </div>
             <nav>
-                <button class="nav-btn active" onclick="switchPage('portada', event)">Inicio</button>
-                <button class="nav-btn" onclick="switchPage('nota1', event)">Rutas Alternativas</button>
-                <button class="nav-btn" onclick="switchPage('nota2', event)">Tecnología e IA</button>
-                <button class="nav-btn accent-btn" onclick="switchPage('ia-page', event)">Acceso IA <i class="fa-solid fa-robot"></i></button>
+                <button class="nav-btn active" onclick="switchPage('portada')">Inicio</button>
+                <button class="nav-btn" onclick="switchPage('nota1')">Rutas Alternativas</button>
+                <button class="nav-btn" onclick="switchPage('nota2')">Tecnología e IA</button>
+                <button class="nav-btn accent-btn" onclick="switchPage('ia-page')">Acceso IA <i class="fa-solid fa-robot"></i></button>
             </nav>
         </div>
     </header>
@@ -29,22 +29,22 @@
             <div class="hero-content">
                 <h1>EXPLORA • VIAJA • DESCUBRE</h1>
                 <p>La guía definitiva para tu próximo viaje en carretera por Chile sin salirte del presupuesto.</p>
-                <button class="cta-btn" onclick="switchPage('ia-page', event)">Planificar mi Ruta</button>
+                <button class="cta-btn" onclick="switchPage('ia-page')">Planificar mi Ruta</button>
             </div>
         </section>
 
         <section class="intro-cards container">
-            <div class="card" onclick="switchPage('nota1', event)">
+            <div class="card" onclick="switchPage('nota1')">
                 <i class="fa-solid fa-campground icon-card"></i>
                 <h3>El Auge Overland</h3>
                 <p>Descubre por qué viajar sobre ruedas y acampar es la nueva forma favorita de recorrer Chile.</p>
             </div>
-            <div class="card" onclick="switchPage('nota2', event)">
+            <div class="card" onclick="switchPage('nota2')">
                 <i class="fa-solid fa-gas-pump icon-card"></i>
                 <h3>Evita Sorpresas</h3>
                 <p>El combustible y los peajes pueden arruinar tu viaje. Te contamos cómo la IA es tu mejor aliada.</p>
             </div>
-            <div class="card" onclick="switchPage('ia-page', event)">
+            <div class="card" onclick="switchPage('ia-page')">
                 <i class="fa-solid fa-calculator icon-card"></i>
                 <h3>Estimador Inteligente</h3>
                 <p>Calcula el gasto exacto de bencina y peajes antes de encender el motor.</p>
@@ -60,22 +60,22 @@
                 <div class="team-member">
                     <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
                     <h4>Laura Ellis</h4>
-                    <span>Periodismo</span>
+                    <span>Periodista</span>
                 </div>
                 <div class="team-member">
                     <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
                     <h4>Andrea Huentequeo</h4>
-                    <span>Periodismo</span>
+                    <span>Periodista</span>
                 </div>
                 <div class="team-member">
                     <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
                     <h4>Katherine Matamala</h4>
-                    <span>Periodismo</span>
+                    <span>Periodista</span>
                 </div>
                 <div class="team-member">
                     <div class="member-avatar"><i class="fa-solid fa-user-pen"></i></div>
                     <h4>Thomas Quintanilla</h4>
-                    <span>Periodismo</span>
+                    <span>Periodista</span>
                 </div>
             </div>
         </section>
@@ -119,3 +119,18 @@
 
             <a href="https://tu-enlace-a-la-ia.com" target="_blank" rel="noopener noreferrer" class="ia-link-container">
                 <button class="calc-btn">
+                    Iniciar Estimador de Ruta <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+            </a>
+            
+            <p class="ia-footer-text">La herramienta se abrirá en una nueva pestaña para que no pierdas tu navegación.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Chilean Roadtrips - Explora • Viaja • Descubre. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
