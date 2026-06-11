@@ -1,10 +1,12 @@
-/* CONFIGURACIÓN GENERAL Y COLORES DEL LOGO */
+/* CONFIGURACIÓN GENERAL Y NUEVA PALETA DE COLORES */
 :root {
-    --azul-marino: #1D3557;   /* Bordes, cinta y botones principales */
-    --verde-oliva: #4A7C59;   /* Elementos de naturaleza y secundario */
-    --amarillo-sol: #F4A261;  /* Acento y botones de llamada a la acción */
-    --blanco-hueso: #F1FAEE;  /* Fondo suave estilo orgánico */
-    --texto-oscuro: #2B2D42;
+    --azul-noche: #0D0221;    /* Color principal: Fondos oscuros, Navbar y títulos fuertes */
+    --calipso-mar: #75B8C8;   /* Color secundario: Botones principales y llamadas a la acción */
+    --verde-menta: #77CBB9;   /* Color de acento: Detalles, iconos y resaltes del menú */
+    --verde-oliva: #506C64;   /* Tonos complementarios: Bordes sutiles y textos secundarios */
+    
+    --blanco-hueso: #F7F9FA;  /* Fondo general de la página para que contraste con el azul noche */
+    --texto-oscuro: #1A1E24;
     --blanco-puro: #FFFFFF;
 }
 
@@ -29,13 +31,13 @@ body {
     padding: 40px 20px;
 }
 
-/* NAVBAR */
+/* NAVBAR (ACTUALIZADO CON TU PALETA) */
 header {
-    background-color: var(--azul-marino);
+    background-color: var(--azul-noche);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .nav-container {
@@ -54,7 +56,7 @@ header {
 }
 
 .logo-placeholder {
-    color: var(--amarillo-sol);
+    color: var(--verde-menta);
     font-size: 24px;
 }
 
@@ -82,17 +84,18 @@ nav {
 }
 
 .nav-btn:hover, .nav-btn.active {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--verde-menta);
 }
 
 .accent-btn {
-    background-color: var(--amarillo-sol);
-    color: var(--azul-marino);
+    background-color: var(--calipso-mar);
+    color: var(--azul-noche);
     font-weight: bold;
 }
 
 .accent-btn:hover {
-    background-color: #e7924f;
+    background-color: var(--verde-menta);
 }
 
 /* SISTEMA DE PÁGINAS OCULTAS */
@@ -107,7 +110,7 @@ nav {
 
 /* PORTADA HERO */
 .hero {
-    background: linear-gradient(rgba(29, 53, 87, 0.7), rgba(42, 157, 143, 0.4)), url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(13, 2, 33, 0.85), rgba(80, 108, 100, 0.4)), url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=1200') no-repeat center center/cover;
     height: 450px;
     display: flex;
     align-items: center;
@@ -121,30 +124,32 @@ nav {
     font-size: 42px;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 .hero-content p {
     font-size: 18px;
     max-width: 600px;
     margin: 0 auto 30px;
+    color: #E2E8F0;
 }
 
 .cta-btn {
-    background-color: var(--amarillo-sol);
-    color: var(--azul-marino);
+    background-color: var(--calipso-mar);
+    color: var(--azul-noche);
     border: none;
     padding: 12px 30px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: 0.3s;
 }
 
 .cta-btn:hover {
     transform: translateY(-2px);
+    background-color: var(--verde-menta);
 }
 
 /* TARJETAS DE INTRODUCCIÓN */
@@ -168,7 +173,7 @@ nav {
 
 .card:hover {
     transform: translateY(-5px);
-    border-bottom-color: var(--amarillo-sol);
+    border-bottom-color: var(--verde-menta);
 }
 
 .icon-card {
@@ -177,7 +182,11 @@ nav {
     margin-bottom: 15px;
 }
 
-/* ARTÍCULOS DE PERIODISMO */
+.card:hover .icon-card {
+    color: var(--calipso-mar);
+}
+
+/* ARTÍCULOS */
 .news-article {
     background: var(--blanco-puro);
     padding: 40px;
@@ -195,7 +204,7 @@ nav {
 
 .news-article h2 {
     font-size: 32px;
-    color: var(--azul-marino);
+    color: var(--azul-noche);
     margin: 10px 0;
 }
 
@@ -216,16 +225,16 @@ hr {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #444;
+    color: #333;
 }
 
 blockquote {
-    border-left: 5px solid var(--amarillo-sol);
+    border-left: 5px solid var(--verde-menta);
     padding-left: 20px;
     font-style: italic;
     font-size: 18px;
     margin: 30px 0;
-    color: var(--azul-marino);
+    color: var(--azul-noche);
 }
 
 /* CAJA DE IA INTERACTIVA */
@@ -236,43 +245,17 @@ blockquote {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e2e8f0;
 }
 
 .ia-box h2 {
-    color: var(--azul-marino);
+    color: var(--azul-noche);
     margin-bottom: 10px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.form-group input, .form-group select {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 15px;
-    outline: none;
-    transition: 0.3s;
-}
-
-.form-group input:focus, .form-group select:focus {
-    border-color: var(--verde-oliva);
 }
 
 .calc-btn {
     width: 100%;
-    background-color: var(--azul-marino);
+    background-color: var(--azul-noche);
     color: var(--blanco-puro);
     border: none;
     padding: 14px;
@@ -284,57 +267,94 @@ blockquote {
 }
 
 .calc-btn:hover {
-    background-color: #132237;
-}
-
-/* RESULTADOS SIMULADOS DE LA IA */
-.results {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 2px dashed #e0e0e0;
-}
-
-.results.hidden {
-    display: none;
-}
-
-.res-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.res-item.total {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--verde-oliva);
-    margin-top: 15px;
+    background-color: var(--verde-oliva);
+    color: var(--blanco-puro);
 }
 
 .tips-ia {
-    background-color: #fcf6ed;
-    border-left: 4px solid var(--amarillo-sol);
+    background-color: #F0FDF4;
+    border-left: 4px solid var(--verde-menta);
     padding: 15px;
     margin-top: 20px;
     border-radius: 0 8px 8px 0;
 }
 
 .tips-ia h4 {
-    color: #b06a2e;
+    color: var(--verde-oliva);
     margin-bottom: 5px;
 }
 
-.tips-ia p {
-    font-size: 14px;
+/* SECCIÓN DEL EQUIPO */
+.team-section {
+    margin-top: 60px;
+    background: rgba(234, 242, 243, 0.7);
+    border-radius: 15px;
+    padding: 40px 20px;
+}
+
+.team-title text-align: center;
+.team-title h2 {
+    color: var(--azul-noche);
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.team-title p {
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.team-member {
+    background: var(--blanco-puro);
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    border-top: 3px solid var(--calipso-mar);
+}
+
+.member-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: var(--blanco-hueso);
+    color: var(--azul-noche);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.team-member h4 {
+    color: var(--texto-oscuro);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.team-member span {
+    color: var(--verde-oliva);
+    font-size: 13px;
+    font-weight: 500;
 }
 
 /* FOOTER */
 footer {
-    background-color: var(--azul-marino);
+    background-color: var(--azul-noche);
     color: var(--blanco-puro);
     text-align: center;
     padding: 20px;
     font-size: 13px;
     margin-top: auto;
+    border-top: 2px solid var(--verde-oliva);
 }
