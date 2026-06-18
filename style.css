@@ -396,3 +396,10 @@ footer {
     margin-top: auto;
     border-top: 2px solid var(--verde-oliva);
 }
+
+/* Estilo para el Moai mini del menú */
+.logo-img-mini {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+}
