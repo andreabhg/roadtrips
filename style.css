@@ -116,9 +116,9 @@ nav {
 
 /* PORTADA: HERO INTERFAZ */
 .hero {
-    /* Aquí llamamos a tu imagen grande de fondo con un filtro oscuro para que los textos se lean perfecto */
-    background: linear-gradient(rgba(13, 2, 33, 0.8), rgba(13, 2, 33, 0.6)), url('nuevo_logo.jpg') no-repeat center center/cover;
-    height: 500px; /* Le subí un poquito el alto para que se luzca más tu logo de fondo */
+    /* Usamos tu imagen "nuevo logo.jpg". Asegúrate de que el archivo esté en GitHub con este mismo nombre y en minúsculas: nuevo_logo.jpg */
+    background: linear-gradient(rgba(13, 2, 33, 0.75), rgba(13, 2, 33, 0.75)), url('nuevo_logo.jpg') no-repeat center center/cover;
+    height: 550px; 
     display: flex;
     align-items: center;
     justify-content: center;
