@@ -116,8 +116,7 @@ nav {
 
 /* PORTADA: HERO INTERFAZ */
 .hero {
-    /* Cambiado a .png y agregada compatibilidad por si tiene espacios en el nombre */
-    background: linear-gradient(rgba(13, 2, 33, 0.75), rgba(13, 2, 33, 0.75)), url('nuevo logo.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(13, 2, 33, 0.75), rgba(13, 2, 33, 0.75)), url('./nuevo%20logo.png') no-repeat center center/cover;
     height: 550px; 
     display: flex;
     align-items: center;
