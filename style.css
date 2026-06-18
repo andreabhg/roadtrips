@@ -116,8 +116,8 @@ nav {
 
 /* PORTADA: HERO INTERFAZ */
 .hero {
-    /* Usamos tu imagen "nuevo logo.jpg". Asegúrate de que el archivo esté en GitHub con este mismo nombre y en minúsculas: nuevo_logo.jpg */
-    background: linear-gradient(rgba(13, 2, 33, 0.75), rgba(13, 2, 33, 0.75)), url('nuevo_logo.jpg') no-repeat center center/cover;
+    /* Cambiado a .png y agregada compatibilidad por si tiene espacios en el nombre */
+    background: linear-gradient(rgba(13, 2, 33, 0.75), rgba(13, 2, 33, 0.75)), url('nuevo logo.png') no-repeat center center/cover;
     height: 550px; 
     display: flex;
     align-items: center;
