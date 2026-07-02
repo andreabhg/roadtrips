@@ -114,23 +114,31 @@ nav {
     display: block;
 }
 
-/* PORTADA: HERO INTERFAZ */
+/* PORTADA: HERO INTERFAZ (EFECTO TRANSLÚCIDO PRO) */
 .hero {
-    background: linear-gradient(rgba(13, 2, 33, 0.75), rgba(13, 2, 33, 0.75)), url('./nuevo%20logo.png') no-repeat center center/cover;
-    height: 550px; 
+    /* Usamos una foto real de una ruta escénica y le ponemos encima tu color azul noche con un 75% de transparencia (0.75) */
+    background: linear-gradient(rgba(13, 2, 33, 0.75), rgba(13, 2, 33, 0.75)), 
+                url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1600') no-repeat center center/cover;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--blanco-puro);
     padding: 0 20px;
+    width: 100%;
+}
+
+.hero-content {
+    z-index: 2;
 }
 
 .hero-content h1 {
     font-size: 42px;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    color: var(--blanco-puro) !important;
 }
 
 .hero-content p {
@@ -138,6 +146,7 @@ nav {
     max-width: 600px;
     margin: 0 auto 30px;
     color: #E2E8F0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 .cta-btn {
